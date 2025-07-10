@@ -1,0 +1,77 @@
+graph TD
+    Start([Start: Logic Journey]) --> Foundation{Foundation Level}
+    
+    Foundation --> BasicConcepts["Basic Concepts<br/>Copi & Cohen: Introduction to Logic<br/>Hurley: Concise Introduction to Logic<br/>Beall: Logic - The Basics"]
+    Foundation --> HistoricalContext["Historical Context<br/>Kneale & Kneale: Development of Logic<br/>Jorgensen: History of Western Logic<br/>Bobzien: Ancient Logic"]
+    
+    BasicConcepts --> PropositionalLogic["Propositional Logic<br/>Goldrei: Propositional & Predicate Calculus<br/>Kleene: Mathematical Logic<br/>Grassmann: Logic & Discrete Mathematics"]
+    HistoricalContext --> AncientLogic["Ancient Logic<br/>Aristotle: Organon (Complete Works)<br/>Corcoran: Ancient Logic & Modern Interpretations<br/>Sandbach: The Stoics"]
+    
+    PropositionalLogic --> PredicateLogic["Predicate Logic<br/>Enderton: Mathematical Introduction to Logic<br/>Mendelson: Introduction to Mathematical Logic<br/>Hamilton: Logic for Mathematicians"]
+    AncientLogic --> MedievalLogic["Medieval Logic<br/>Boehner: Medieval Logic<br/>Rescher: Arabic Logic<br/>Cambridge History of Later Medieval Philosophy"]
+    
+    PredicateLogic --> IntermediateLevel{Intermediate Level}
+    MedievalLogic --> IntermediateLevel
+    
+    IntermediateLevel --> ModernLogic["Modern Logic Revolution<br/>Frege: Begriffsschrift<br/>Russell & Whitehead: Principia Mathematica<br/>Dummett: Frege - Philosophy of Language<br/>Grattan-Guinness: Search for Mathematical Roots"]
+    IntermediateLevel --> SetTheory["Set Theory & Foundations<br/>Kunen: Set Theory - Independence Proofs<br/>Hrbacek & Jech: Introduction to Set Theory<br/>Halmos: Naive Set Theory"]
+    IntermediateLevel --> ProofTheory["Proof Theory<br/>Takeuti: Proof Theory<br/>Negri & von Plato: Structural Proof Theory<br/>Gentzen: Collected Papers"]
+    
+    ModernLogic --> MathematicalLogic["Mathematical Logic<br/>Bell & Machover: Course in Mathematical Logic<br/>Boolos, Burgess & Jeffrey: Computability and Logic<br/>Marker: Model Theory - An Introduction"]
+    SetTheory --> MathematicalLogic
+    ProofTheory --> MathematicalLogic
+    
+    MathematicalLogic --> AdvancedLevel{Advanced Level}
+    
+    AdvancedLevel --> ModalLogic["Modal Logic<br/>Chellas: Modal Logic - An Introduction<br/>Blackburn, de Rijke & Venema: Modal Logic<br/>Hintikka: Knowledge and Belief<br/>Lewis: Counterfactuals"]
+    AdvancedLevel --> NonClassicalLogic["Non-Classical Logics<br/>Priest: Introduction to Non-Classical Logic<br/>Rescher: Many-Valued Logic<br/>Kosko: Fuzzy Logic - An Introduction<br/>Troelstra & van Dalen: Constructivism in Mathematics"]
+    AdvancedLevel --> PhilosophicalLogic["Philosophical Logic<br/>Burgess: Philosophical Logic - An Introduction<br/>Sainsbury: Paradoxes<br/>Blackwell Guide to Philosophical Logic<br/>Haack: Philosophy of Logics"]
+    
+    ModalLogic --> SpecializedFields{Specialized Fields}
+    NonClassicalLogic --> SpecializedFields
+    PhilosophicalLogic --> SpecializedFields
+    
+    SpecializedFields --> ComputationalLogic["Computational Logic<br/>Lloyd: Logic Programming<br/>Wos et al: Automated Reasoning<br/>Handbook of Automated Reasoning<br/>Clocksin & Mellish: Programming in Prolog"]
+    SpecializedFields --> CategoryTheory["Category Theory<br/>Mac Lane: Category Theory for Working Mathematician<br/>Barr & Wells: Toposes, Triples and Theories<br/>Lawvere & Schanuel: Conceptual Mathematics<br/>Awodey: Category Theory"]
+    SpecializedFields --> LogicApplications["Logic Applications<br/>Huth & Ryan: Logic in Computer Science<br/>Lappin: Formal Semantics<br/>Stenning & van Lambalgen: Human Reasoning and Cognitive Science"]
+    
+    ComputationalLogic --> Contemporary{Contemporary Developments}
+    CategoryTheory --> Contemporary
+    LogicApplications --> Contemporary
+    
+    Contemporary --> QuantumLogic["Quantum Logic<br/>Beltrametti & Cassinelli: Quantum Logic<br/>Nielsen & Chuang: Quantum Computation and Information<br/>Dalla Chiara & Giuntini: Quantum Logic"]
+    Contemporary --> AlgebraicLogic["Algebraic Logic<br/>Henkin, Monk & Tarski: Cylindric Algebras<br/>Hirsch & Hodkinson: Relation Algebras<br/>Németi: Algebraic Logic"]
+    Contemporary --> CuttingEdge["Cutting-Edge Research<br/>Simpson: Subsystems of Second Order Arithmetic<br/>Kohlenbach: Applied Proof Theory<br/>Univalent Foundations Program: HoTT Book<br/>Immerman: Descriptive Complexity"]
+    
+    %% Parallel tracks for different approaches
+    Foundation --> AlternativeEntry["Alternative Entry Points"]
+    AlternativeEntry --> MathBackground["Mathematics Background<br/>→ Start with Set Theory"]
+    AlternativeEntry --> PhilosophyBackground["Philosophy Background<br/>→ Start with Ancient Logic"]
+    AlternativeEntry --> CSBackground["Computer Science Background<br/>→ Start with Propositional Logic"]
+    
+    MathBackground --> SetTheory
+    PhilosophyBackground --> AncientLogic
+    CSBackground --> PropositionalLogic
+    
+    %% Key connections showing interdependencies
+    SetTheory -.-> CategoryTheory
+    ProofTheory -.-> ComputationalLogic
+    ModalLogic -.-> PhilosophicalLogic
+    MathematicalLogic -.-> QuantumLogic
+    
+    %% Styling
+    classDef startNode fill:#e1f5fe,stroke:#01579b,stroke-width:3px
+    classDef foundationNode fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef intermediateNode fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef advancedNode fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef specializedNode fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    classDef contemporaryNode fill:#f1f8e9,stroke:#33691e,stroke-width:2px
+    classDef decisionNode fill:#fff8e1,stroke:#ff6f00,stroke-width:2px
+    
+    class Start startNode
+    class BasicConcepts,HistoricalContext,PropositionalLogic,AncientLogic,PredicateLogic,MedievalLogic foundationNode
+    class ModernLogic,SetTheory,ProofTheory,MathematicalLogic intermediateNode
+    class ModalLogic,NonClassicalLogic,PhilosophicalLogic advancedNode
+    class ComputationalLogic,CategoryTheory,LogicApplications specializedNode
+    class QuantumLogic,AlgebraicLogic,CuttingEdge contemporaryNode
+    class Foundation,IntermediateLevel,AdvancedLevel,SpecializedFields,Contemporary decisionNode

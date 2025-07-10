@@ -1,0 +1,100 @@
+graph TD
+    Start([Complete Logic Study Journey]) --> ChoosePath{Choose Your Approach}
+
+    ChoosePath --> FoundationalPath["Foundational Path<br/>Canonical Works & Historical Development"]
+    ChoosePath --> PracticalPath["Practical Path<br/>Textbooks & Study Resources"]
+
+    %% Foundational Path
+    FoundationalPath --> FoundationCanon{Foundation Level - Canon}
+    FoundationCanon --> BasicConcepts["Basic Concepts - Canon<br/>Copi & Cohen: Introduction to Logic<br/>Hurley: Concise Introduction to Logic<br/>Beall: Logic - The Basics"]
+    FoundationCanon --> HistoricalContext["Historical Context - Canon<br/>Kneale & Kneale: Development of Logic<br/>Jorgensen: History of Western Logic<br/>Bobzien: Ancient Logic"]
+
+    BasicConcepts --> PropositionalCanon["Propositional Logic - Canon<br/>Goldrei: Propositional & Predicate Calculus<br/>Kleene: Mathematical Logic<br/>Grassmann: Logic & Discrete Mathematics"]
+    HistoricalContext --> AncientCanon["Ancient Logic - Canon<br/>Aristotle: Organon (Complete Works)<br/>Corcoran: Ancient Logic & Modern Interpretations<br/>Sandbach: The Stoics"]
+
+    %% Practical Path
+    PracticalPath --> FoundationPractical{Foundation Level - Study}
+    FoundationPractical --> BasicTexts["Basic Logic Textbooks<br/>Bergmann, Moor & Nelson: The Logic Book<br/>Shoenfield: Mathematical Logic<br/>van Dalen: Logic and Structure<br/>Lemmon: Beginning Logic"]
+    FoundationPractical --> IntroBooks["Introductory Resources<br/>Tomassi: Logic<br/>Smith: An Introduction to Formal Logic<br/>Forbes: Modern Logic<br/>Volpano: Introduction to Mathematical Logic"]
+
+    %% Convergence Point
+    PropositionalCanon --> IntermediateLevel{Intermediate Level}
+    AncientCanon --> IntermediateLevel
+    BasicTexts --> IntermediateLevel
+    IntroBooks --> IntermediateLevel
+
+    %% Intermediate Level - Combined Resources
+    IntermediateLevel --> ModernLogic["Modern Logic Revolution<br/>CANON: Frege: Begriffsschrift<br/>CANON: Russell & Whitehead: Principia Mathematica<br/>STUDY: Dummett: Frege - Philosophy of Language<br/>STUDY: Grattan-Guinness: Search for Mathematical Roots"]
+
+    IntermediateLevel --> SetTheory["Set Theory & Foundations<br/>CANON: Kunen: Set Theory - Independence Proofs<br/>CANON: Halmos: Naive Set Theory<br/>STUDY: Devlin: The Joy of Sets<br/>STUDY: Jech: Set Theory (3rd edition)"]
+
+    IntermediateLevel --> ProofTheory["Proof Theory<br/>CANON: Takeuti: Proof Theory<br/>CANON: Gentzen: Collected Papers<br/>STUDY: Troelstra & Schwichtenberg: Basic Proof Theory<br/>STUDY: Girard: Proofs and Types"]
+
+    ModernLogic --> MathematicalLogic["Mathematical Logic<br/>CANON: Bell & Machover: Course in Mathematical Logic<br/>CANON: Boolos, Burgess & Jeffrey: Computability and Logic<br/>STUDY: Chang & Keisler: Model Theory<br/>STUDY: Marker: Model Theory - An Introduction"]
+
+    SetTheory --> MathematicalLogic
+    ProofTheory --> MathematicalLogic
+
+    MathematicalLogic --> AdvancedLevel{Advanced Level}
+
+    %% Advanced Level - Combined Resources
+    AdvancedLevel --> ModalLogic["Modal Logic<br/>CANON: Chellas: Modal Logic - An Introduction<br/>CANON: Lewis: Counterfactuals<br/>STUDY: Hughes & Cresswell: A New Introduction to Modal Logic<br/>STUDY: Goldblatt: Logics of Time and Computation"]
+
+    AdvancedLevel --> NonClassicalLogic["Non-Classical Logics<br/>CANON: Priest: Introduction to Non-Classical Logic<br/>CANON: Troelstra & van Dalen: Constructivism in Mathematics<br/>STUDY: Restall: Introduction to Substructural Logics<br/>STUDY: Dunn & Hardegree: Algebraic Methods"]
+
+    AdvancedLevel --> PhilosophicalLogic["Philosophical Logic<br/>CANON: Burgess: Philosophical Logic - An Introduction<br/>CANON: Sainsbury: Paradoxes<br/>STUDY: Read: Thinking About Logic<br/>STUDY: Gamut: Logic, Language and Meaning"]
+
+    ModalLogic --> SpecializedLevel{Specialized Level}
+    NonClassicalLogic --> SpecializedLevel
+    PhilosophicalLogic --> SpecializedLevel
+
+    %% Specialized Level - Combined Resources
+    SpecializedLevel --> ComputationalLogic["Computational Logic<br/>CANON: Lloyd: Logic Programming<br/>CANON: Handbook of Automated Reasoning<br/>STUDY: Sterling & Shapiro: The Art of Prolog<br/>STUDY: Fitting: First-Order Logic and Automated Theorem Proving"]
+
+    SpecializedLevel --> CategoryTheory["Category Theory<br/>CANON: Mac Lane: Category Theory for Working Mathematician<br/>CANON: Lawvere & Schanuel: Conceptual Mathematics<br/>STUDY: Pierce: Basic Category Theory for Computer Scientists<br/>STUDY: Goldblatt: Topoi: The Categorial Analysis of Logic"]
+
+    SpecializedLevel --> LogicApplications["Logic Applications<br/>CANON: Huth & Ryan: Logic in Computer Science<br/>CANON: Stenning & van Lambalgen: Human Reasoning<br/>STUDY: Russell & Norvig: Artificial Intelligence (Logic sections)<br/>STUDY: Blackburn & Bos: Representation and Inference"]
+
+    ComputationalLogic --> ContemporaryLevel{Contemporary Level}
+    CategoryTheory --> ContemporaryLevel
+    LogicApplications --> ContemporaryLevel
+
+    %% Contemporary Level
+    ContemporaryLevel --> QuantumLogic["Quantum Logic<br/>CANON: Beltrametti & Cassinelli: Quantum Logic<br/>STUDY: Nielsen & Chuang: Quantum Computation and Information"]
+
+    ContemporaryLevel --> CuttingEdge["Cutting-Edge Research<br/>CANON: Simpson: Subsystems of Second Order Arithmetic<br/>CANON: Univalent Foundations Program: HoTT Book<br/>STUDY: Kohlenbach: Applied Proof Theory<br/>STUDY: Research Journals & Conference Proceedings"]
+
+    %% Practical Resources Branch
+    ContemporaryLevel --> PracticalResources["Practical Study Resources<br/>SOFTWARE: Lean Theorem Prover, Coq, Isabelle/HOL<br/>ONLINE: MIT OpenCourseWare, Stanford Logic courses<br/>EXERCISES: Bergmann: The Logic Book exercises<br/>COMMUNITIES: Logic study groups and forums"]
+
+    %% Alternative Entry Points
+    Start --> AlternativeEntry["Alternative Entry Points by Background"]
+    AlternativeEntry --> MathBackground["Mathematics Background<br/>START: Set Theory canonical texts<br/>SUPPLEMENT: Mathematical logic textbooks"]
+    AlternativeEntry --> PhilosophyBackground["Philosophy Background<br/>START: Ancient Logic canonical works<br/>SUPPLEMENT: Philosophical logic textbooks"]
+    AlternativeEntry --> CSBackground["Computer Science Background<br/>START: Computational logic resources<br/>SUPPLEMENT: Logic programming texts"]
+
+    MathBackground --> SetTheory
+    PhilosophyBackground --> AncientCanon
+    CSBackground --> ComputationalLogic
+
+    %% Cross-connections showing relationships
+    QuantumLogic -.-> MathematicalLogic
+    CuttingEdge -.-> CategoryTheory
+    PracticalResources -.-> ComputationalLogic
+
+    %% Styling
+    classDef startNode fill:#e1f5fe,stroke:#01579b,stroke-width:4px
+    classDef pathNode fill:#fff3e0,stroke:#e65100,stroke-width:3px
+    classDef canonNode fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef studyNode fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef combinedNode fill:#fff8e1,stroke:#ff6f00,stroke-width:2px
+    classDef practicalNode fill:#f1f8e9,stroke:#33691e,stroke-width:2px
+    classDef decisionNode fill:#fce4ec,stroke:#880e4f,stroke-width:3px
+
+    class Start startNode
+    class FoundationalPath,PracticalPath pathNode
+    class BasicConcepts,HistoricalContext,PropositionalCanon,AncientCanon canonNode
+    class BasicTexts,IntroBooks studyNode
+    class ModernLogic,SetTheory,ProofTheory,MathematicalLogic,ModalLogic,NonClassicalLogic,PhilosophicalLogic,ComputationalLogic,CategoryTheory,LogicApplications,QuantumLogic,CuttingEdge combinedNode
+    class PracticalResources practicalNode
+    class ChoosePath,FoundationCanon,FoundationPractical,IntermediateLevel,AdvancedLevel,SpecializedLevel,ContemporaryLevel,AlternativeEntry decisionNode

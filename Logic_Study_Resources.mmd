@@ -1,0 +1,76 @@
+graph TD
+    Start([Start: Logic Study Resources]) --> Foundation{Foundation Level}
+
+    Foundation --> BasicTexts["Basic Logic Textbooks<br/>Bergmann, Moor & Nelson: The Logic Book<br/>Shoenfield: Mathematical Logic<br/>van Dalen: Logic and Structure<br/>Lemmon: Beginning Logic"]
+    Foundation --> IntroBooks["Introductory Resources<br/>Tomassi: Logic<br/>Smith: An Introduction to Formal Logic<br/>Forbes: Modern Logic<br/>Volpano: Introduction to Mathematical Logic"]
+
+    BasicTexts --> PropositionalStudy["Propositional Logic Study<br/>Mendelson: Mathematical Logic (Ch 1-2)<br/>Huth & Ryan: Logic in Computer Science (Ch 1-3)<br/>Ben-Ari: Mathematical Logic for Computer Science<br/>Rosen: Discrete Mathematics (Logic sections)"]
+    IntroBooks --> PredicateStudy["Predicate Logic Study<br/>Enderton: A Mathematical Introduction to Logic<br/>Ebbinghaus, Flum & Thomas: Mathematical Logic<br/>Crossley: What is Mathematical Logic?<br/>Robbin: Mathematical Logic"]
+
+    PropositionalStudy --> IntermediateLevel{Intermediate Level}
+    PredicateStudy --> IntermediateLevel
+
+    IntermediateLevel --> SetTheoryTexts["Set Theory Textbooks<br/>Devlin: The Joy of Sets<br/>Suppes: Axiomatic Set Theory<br/>Jech: Set Theory (3rd edition)<br/>Moschovakis: Notes on Set Theory"]
+    IntermediateLevel --> ProofTheoryTexts["Proof Theory Textbooks<br/>Troelstra & Schwichtenberg: Basic Proof Theory<br/>Girard: Proofs and Types<br/>Pohlers: Proof Theory<br/>Ranta: Type-Theoretical Grammar"]
+    IntermediateLevel --> ModelTheoryTexts["Model Theory Textbooks<br/>Chang & Keisler: Model Theory<br/>Hodges: A Shorter Model Theory<br/>Tent & Ziegler: A Course in Model Theory<br/>Poizat: A Course in Model Theory"]
+
+    SetTheoryTexts --> AdvancedLevel{Advanced Level}
+    ProofTheoryTexts --> AdvancedLevel
+    ModelTheoryTexts --> AdvancedLevel
+
+    AdvancedLevel --> ModalLogicTexts["Modal Logic Textbooks<br/>Hughes & Cresswell: A New Introduction to Modal Logic<br/>Goldblatt: Logics of Time and Computation<br/>Fitting & Mendelsohn: First-Order Modal Logic<br/>Garson: Modal Logic for Philosophers"]
+    AdvancedLevel --> NonClassicalTexts["Non-Classical Logic Textbooks<br/>Restall: An Introduction to Substructural Logics<br/>Dunn & Hardegree: Algebraic Methods in Philosophical Logic<br/>Priest: An Introduction to Non-Classical Logic<br/>Urquhart: Many-Valued Logic"]
+    AdvancedLevel --> PhilosophicalTexts["Philosophical Logic Textbooks<br/>Read: Thinking About Logic<br/>Jacquette: Philosophy of Logic<br/>Wolfram: Philosophical Logic<br/>Gamut: Logic, Language and Meaning"]
+
+    ModalLogicTexts --> SpecializedLevel{Specialized Level}
+    NonClassicalTexts --> SpecializedLevel
+    PhilosophicalTexts --> SpecializedLevel
+
+    SpecializedLevel --> ComputationalTexts["Computational Logic Textbooks<br/>Sterling & Shapiro: The Art of Prolog<br/>Bratko: Prolog Programming for Artificial Intelligence<br/>Fitting: First-Order Logic and Automated Theorem Proving<br/>Robinson & Voronkov: Handbook of Automated Reasoning"]
+    SpecializedLevel --> CategoryTexts["Category Theory Textbooks<br/>Pierce: Basic Category Theory for Computer Scientists<br/>Goldblatt: Topoi: The Categorial Analysis of Logic<br/>Johnstone: Topos Theory<br/>Lambek & Scott: Introduction to Higher Order Categorical Logic"]
+    SpecializedLevel --> ApplicationTexts["Applied Logic Textbooks<br/>Partee, ter Meulen & Wall: Mathematical Methods in Linguistics<br/>Kamp & Reyle: From Discourse to Logic<br/>Blackburn & Bos: Representation and Inference for Natural Language<br/>Russell & Norvig: Artificial Intelligence (Logic sections)"]
+
+    ComputationalTexts --> PracticalLevel{Practical Resources}
+    CategoryTexts --> PracticalLevel
+    ApplicationTexts --> PracticalLevel
+
+    PracticalLevel --> WorkbooksExercises["Workbooks & Exercise Collections<br/>Bergmann: The Logic Book (exercises)<br/>Bostock: Intermediate Logic<br/>Jeffrey: Formal Logic: Its Scope and Limits<br/>Kalish, Montague & Mar: Logic: Techniques of Formal Reasoning"]
+    PracticalLevel --> SoftwareTools["Software & Tools<br/>Lean Theorem Prover<br/>Coq Proof Assistant<br/>Isabelle/HOL<br/>Agda<br/>Natural Deduction Proof Editors"]
+    PracticalLevel --> OnlineResources["Online Learning Resources<br/>MIT OpenCourseWare: Logic courses<br/>Stanford Logic courses<br/>Coursera: Logic specializations<br/>edX: Formal Logic courses<br/>YouTube: Logic lecture series"]
+
+    %% Alternative entry points based on background
+    Foundation --> AlternativeEntry["Alternative Entry Points"]
+    AlternativeEntry --> MathStudents["Mathematics Students<br/>Shoenfield: Mathematical Logic<br/>Monk: Mathematical Logic<br/>Hinman: Fundamentals of Mathematical Logic"]
+    AlternativeEntry --> PhilosophyStudents["Philosophy Students<br/>Hurley: A Concise Introduction to Logic<br/>Copi & Cohen: Introduction to Logic<br/>Bergmann, Moor & Nelson: The Logic Book"]
+    AlternativeEntry --> CSStudents["Computer Science Students<br/>Huth & Ryan: Logic in Computer Science<br/>Ben-Ari: Mathematical Logic for Computer Science<br/>Gallier: Logic for Computer Science"]
+
+    MathStudents --> SetTheoryTexts
+    PhilosophyStudents --> PhilosophicalTexts
+    CSStudents --> ComputationalTexts
+
+    %% Study progression connections
+    WorkbooksExercises -.-> SoftwareTools
+    OnlineResources -.-> WorkbooksExercises
+
+    %% Self-study paths
+    PracticalLevel --> SelfStudyPath["Self-Study Recommendations<br/>Start with one comprehensive textbook<br/>Work through all exercises<br/>Supplement with online resources<br/>Practice with proof software<br/>Join study groups or forums"]
+
+    %% Advanced study paths
+    SpecializedLevel --> ResearchLevel["Research-Level Resources<br/>Journal of Symbolic Logic<br/>Annals of Pure and Applied Logic<br/>Logic and Logical Philosophy<br/>Notre Dame Journal of Formal Logic<br/>Conference proceedings: LICS, CSL, TABLEAUX"]
+
+    %% Styling
+    classDef startNode fill:#e1f5fe,stroke:#01579b,stroke-width:3px
+    classDef foundationNode fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef intermediateNode fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+    classDef advancedNode fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef specializedNode fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    classDef practicalNode fill:#f1f8e9,stroke:#33691e,stroke-width:2px
+    classDef decisionNode fill:#fff8e1,stroke:#ff6f00,stroke-width:2px
+
+    class Start startNode
+    class BasicTexts,IntroBooks,PropositionalStudy,PredicateStudy foundationNode
+    class SetTheoryTexts,ProofTheoryTexts,ModelTheoryTexts intermediateNode
+    class ModalLogicTexts,NonClassicalTexts,PhilosophicalTexts advancedNode
+    class ComputationalTexts,CategoryTexts,ApplicationTexts specializedNode
+    class WorkbooksExercises,SoftwareTools,OnlineResources,SelfStudyPath,ResearchLevel practicalNode
+    class Foundation,IntermediateLevel,AdvancedLevel,SpecializedLevel,PracticalLevel decisionNode
