@@ -102,7 +102,7 @@ mmdc -i Logic_Roadmap.mmd -o Logic_Roadmap_HD.png -w 2400 -H 1800 -s 2 -b transp
 ## Author
 
 Conceived, written, and owned by **Qais Alassa** — *قيس العصا*
-[qasawa.com](https://qasawa.com) · Telegram [@qalassa](https://t.me/qalassa)
+[qasawa.com](https://qasawa.com) 
 
 Suggestions, additional resources, and corrections are welcome via issues or pull requests.
 
